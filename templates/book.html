@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Genre Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>🔍 Book Genre Prediction</h1>
+            <form method="POST">
+                <label for="description">Enter Book Description:</label><br>
+                <textarea id="description" name="description" rows="6" required></textarea><br>
+                <input type="submit" value="Predict Genre" class="btn">
+            </form>
+
+            {% if genre %}
+                <div class="result">
+                    <h2>📖 Predicted Genre: <span>{{ genre }}</span></h2>
+                    <p><strong>Description you entered:</strong></p>
+                    <div class="description-box">{{ description }}</div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
