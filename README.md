@@ -36,5 +36,5 @@ BookGenrePrediction/
 ├── app.py 
 ├── Book_Dataset.csv 
 ├── genre_prediction.pkl 
-├── training_model.py 
+└── training_model.py 
 ```
